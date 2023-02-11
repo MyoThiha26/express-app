@@ -26,12 +26,12 @@ const html = `
 </html>
 `;
 
-app.get("/users", (req: Request, res: Response) => {
-  res.send({ name: "Myo Thiha", password: "jfoafo" });
-});
-
 app.get("/api", (req: Request, res: Response) => {
   res.send(html);
+});
+
+app.get("/api/users", (req: Request, res: Response) => {
+  res.send({ name: "Myo Thiha", password: "jfoafo" });
 });
 
 app.listen(port, () => {
